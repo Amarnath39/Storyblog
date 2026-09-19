@@ -1,9 +1,21 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { Story } from '@/lib/stories'
 import StoryCard from '@/components/StoryCard'
 import { Search, Filter, Headphones } from 'lucide-react'
+
+interface Story {
+  slug: string
+  title: string
+  description: string
+  author: string
+  genre: string
+  readingTime: string
+  cover: string
+  ambience: string | null
+  featured: boolean
+  content: string
+}
 
 interface StoriesFilterProps {
   stories: Story[]

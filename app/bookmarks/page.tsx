@@ -1,15 +1,28 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { getAllStories } from '@/lib/stories'
 import StoryCard from '@/components/StoryCard'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Bookmark as BookmarkIcon } from 'lucide-react'
 
+interface Story {
+  slug: string
+  title: string
+  description: string
+  author: string
+  genre: string
+  readingTime: string
+  cover: string
+  ambience: string | null
+  featured: boolean
+  content: string
+}
+
 export default function BookmarksPage() {
   const [bookmarkedSlugs, setBookmarkedSlugs] = useState<string[]>([])
-  const allStories = getAllStories()
+  const [allStories, setAllStories] = useState<Story[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const saved = localStorage.getItem('bookmarks')
@@ -18,7 +31,22 @@ export default function BookmarksPage() {
     }
   }, [])
 
-  const bookmarkedStories = allStories.filter(story => 
+  useEffect(() => {
+    async function fetchStories() {
+      try {
+        const response = await fetch('/api/stories')
+        const stories = await response.json()
+        setAllStories(stories)
+      } catch (error) {
+        console.error('Failed to fetch stories:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchStories()
+  }, [])
+
+  const bookmarkedStories = allStories.filter(story =>
     bookmarkedSlugs.includes(story.slug)
   )
 
@@ -39,7 +67,12 @@ export default function BookmarksPage() {
               </p>
             </div>
 
-            {bookmarkedStories.length > 0 ? (
+            {loading ? (
+              <div className="text-center py-16">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-sage-600 mx-auto"></div>
+                <p className="mt-4 text-warm-gray-600 dark:text-warm-gray-400">Loading your bookmarks...</p>
+              </div>
+            ) : bookmarkedStories.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {bookmarkedStories.map((story) => (
                   <StoryCard key={story.slug} story={story} />
@@ -56,7 +89,7 @@ export default function BookmarksPage() {
                 <p className="text-warm-gray-600 dark:text-warm-gray-400 mb-8">
                   Start bookmarking stories you love to build your personal collection.
                 </p>
-                <a 
+                <a
                   href="/stories"
                   className="inline-flex items-center px-6 py-3 rounded-full bg-sage-600 text-ivory-100 hover:bg-sage-700 transition-colors font-medium"
                 >
