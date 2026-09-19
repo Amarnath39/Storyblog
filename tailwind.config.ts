@@ -1,0 +1,97 @@
+import type { Config } from "tailwindcss"
+
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        ivory: {
+          50: '#FFFEF9',
+          100: '#FFFEF0',
+          200: '#FFFDDA',
+          300: '#FFFCB8',
+          400: '#FFFA8A',
+          500: '#FFF855',
+          600: '#FFF632',
+          700: '#FFF418',
+          800: '#FFF20F',
+          900: '#FFF008',
+        },
+        cream: {
+          50: '#FFFEF7',
+          100: '#FFFDEE',
+          200: '#FFF9D8',
+          300: '#FFF5B2',
+          400: '#FFF082',
+          500: '#FFEB51',
+          600: '#FFE631',
+          700: '#FFE21B',
+          800: '#FFDE13',
+          900: '#FFDA0D',
+        },
+        sage: {
+          50: '#F6F7F4',
+          100: '#E8EBE5',
+          200: '#D4D9CC',
+          300: '#B3C0AA',
+          400: '#8DA07E',
+          500: '#738665',
+          600: '#5E6E54',
+          700: '#4E5A47',
+          800: '#434B3E',
+          900: '#3C4238',
+        },
+        dusty: {
+          blue: {
+            50: '#F4F6F8',
+            100: '#E9EDF2',
+            200: '#D3DBE5',
+            300: '#AEC2D1',
+            400: '#85A0B7',
+            500: '#6788A3',
+            600: '#52718A',
+            700: '#445E74',
+            800: '#3B4F62',
+            900: '#354556',
+          },
+          lavender: {
+            50: '#F7F5F9',
+            100: '#EDE9F2',
+            200: '#DBD2E5',
+            300: '#BAAECF',
+            400: '#9585B5',
+            500: '#7A6BA1',
+            600: '#65568A',
+            700: '#544673',
+            800: '#483A61',
+            900: '#403356',
+          },
+        },
+        warm: {
+          gray: {
+            50: '#F9F8F6',
+            100: '#F2F0EB',
+            200: '#E5E1D6',
+            300: '#D1C9B3',
+            400: '#B5A88E',
+            500: '#9E8F73',
+            600: '#8B7B61',
+            700: '#766A51',
+            800: '#665C46',
+            900: '#5B523E',
+          },
+        },
+      },
+      fontFamily: {
+        serif: ['var(--font-merriweather)', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
+export default config
