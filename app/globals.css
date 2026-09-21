@@ -39,10 +39,10 @@
   :root {
     --background: 30 33 40;
     --foreground: 240 240 235;
-    --ivory-50: #2a2520;
-    --ivory-100: #3a3530;
-    --ivory-200: #4a4035;
-    --cream: #3a3530;
+    --ivory-50: #1a1a1a;
+    --ivory-100: #2d2d2d;
+    --ivory-200: #3d3d3d;
+    --cream: #2d2d2d;
     --sage-50: #1a3a1a;
     --sage-100: #2a502a;
     --sage-200: #3a653a;
@@ -53,15 +53,15 @@
     --sage-700: #c5d6c5;
     --sage-800: #e0ebe0;
     --sage-900: #f0f4f0;
-    --warm-gray-100: #3a3530;
-    --warm-gray-200: #4a4035;
+    --warm-gray-100: #2d2d2d;
+    --warm-gray-200: #3d3d3d;
     --warm-gray-300: #5a5045;
     --warm-gray-400: #7a7065;
     --warm-gray-500: #9a9085;
     --warm-gray-600: #b8b0a5;
     --warm-gray-700: #d4cfc7;
     --warm-gray-800: #e8e4df;
-    --warm-gray-900: #f5f3f0;
+    --warm-gray-900: #1a1a1a;
   }
 }
 
@@ -118,7 +118,7 @@
 }
 
 .dark .story-content {
-  color: var(--ivory-100);
+  color: #e8e8e8;
 }
 
 .sepia .story-content {
@@ -139,12 +139,12 @@
 /* Mobile responsive typography */
 @media (max-width: 768px) {
   .story-content {
-    font-size: 17px;
-    line-height: 1.9;
+    font-size: 18px;
+    line-height: 1.8;
   }
-  
+
   .story-content p {
-    margin-bottom: 1.3em;
+    margin-bottom: 1.4em;
   }
 }
 
@@ -322,6 +322,9 @@
   }
   .text-ivory-100 {
     color: var(--ivory-100);
+  }
+  .text-ivory-200 {
+    color: var(--ivory-200);
   }
 }
 
