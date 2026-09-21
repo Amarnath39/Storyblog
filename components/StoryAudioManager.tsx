@@ -75,12 +75,12 @@ export default function StoryAudioManager({ storyAmbience }: StoryAudioManagerPr
       {/* Fixed bottom notification */}
       {showPrompt && !dismissed && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 animate-slide-up">
-          <div className="bg-ivory-100 dark:bg-warm-gray-800 rounded-2xl shadow-2xl border border-sage-300 dark:border-sage-600 p-5 max-w-md mx-4">
+          <div className="bg-ivory-100 dark:bg-gray-800 rounded-2xl shadow-2xl border border-sage-300 dark:border-sage-600 p-5 max-w-md mx-4">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
                   <Music className="w-5 h-5 text-sage-600 dark:text-sage-400 animate-bounce" />
-                  <p className="text-warm-gray-800 dark:text-ivory-200 text-lg font-medium">
+                  <p className="text-warm-gray-800 dark:text-gray-200 text-lg font-medium">
                     {typedText}
                     <span className="animate-pulse">|</span>
                   </p>
@@ -96,7 +96,7 @@ export default function StoryAudioManager({ storyAmbience }: StoryAudioManagerPr
                     </button>
                     <button
                       onClick={handleSkip}
-                      className="px-4 py-2 text-warm-gray-600 dark:text-warm-gray-400 hover:text-warm-gray-800 dark:hover:text-warm-gray-200 transition-colors font-medium"
+                      className="px-4 py-2 text-warm-gray-600 dark:text-gray-400 hover:text-warm-gray-800 dark:hover:text-gray-200 transition-colors font-medium"
                     >
                       Nah, I'm good
                     </button>
@@ -105,7 +105,7 @@ export default function StoryAudioManager({ storyAmbience }: StoryAudioManagerPr
               </div>
               <button
                 onClick={handleSkip}
-                className="p-1 text-warm-gray-400 hover:text-warm-gray-600 dark:hover:text-warm-gray-200 transition-colors flex-shrink-0"
+                className="p-1 text-warm-gray-400 hover:text-warm-gray-600 dark:hover:text-gray-200 transition-colors flex-shrink-0"
               >
                 <X className="w-5 h-5" />
               </button>

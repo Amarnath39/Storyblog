@@ -11,14 +11,14 @@ export default function StoriesPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 bg-ivory-50 dark:bg-warm-gray-900">
+      <main className="flex-1 bg-ivory-50 dark:bg-gray-950">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Header */}
           <div className="mb-12">
-            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-warm-gray-900 dark:text-ivory-100 mb-4">
+            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-warm-gray-900 dark:text-gray-100 mb-4">
               All Stories
             </h1>
-            <p className="text-lg text-warm-gray-600 dark:text-warm-gray-400">
+            <p className="text-lg text-warm-gray-600 dark:text-gray-400">
               Discover tales across every genre
             </p>
           </div>

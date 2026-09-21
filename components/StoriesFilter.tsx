@@ -61,13 +61,13 @@ export default function StoriesFilter({ stories, genres }: StoriesFilterProps) {
       <div className="mb-8 space-y-4">
         {/* Search */}
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-warm-gray-400" />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-warm-gray-400 dark:text-gray-400" />
           <input
             type="text"
             placeholder="Search stories by title, description, genre, or author..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 rounded-lg border border-warm-gray-200 bg-ivory-100 text-warm-gray-900 placeholder-warm-gray-400 focus:outline-none focus:ring-2 focus:ring-sage-500 dark:border-warm-gray-700 dark:bg-warm-gray-800 dark:text-ivory-100 dark:placeholder-warm-gray-500"
+            className="w-full pl-12 pr-4 py-3 rounded-lg border border-warm-gray-200 bg-ivory-100 text-warm-gray-900 placeholder-warm-gray-400 focus:outline-none focus:ring-2 focus:ring-sage-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-500"
           />
         </div>
 
@@ -75,11 +75,11 @@ export default function StoriesFilter({ stories, genres }: StoriesFilterProps) {
         <div className="flex flex-wrap gap-3">
           {/* Genre Filter */}
           <div className="flex items-center space-x-2">
-            <Filter className="w-4 h-4 text-warm-gray-500" />
+            <Filter className="w-4 h-4 text-warm-gray-500 dark:text-gray-500" />
             <select
               value={selectedGenre}
               onChange={(e) => setSelectedGenre(e.target.value)}
-              className="px-4 py-2 rounded-lg border border-warm-gray-200 bg-ivory-100 text-warm-gray-900 focus:outline-none focus:ring-2 focus:ring-sage-500 dark:border-warm-gray-700 dark:bg-warm-gray-800 dark:text-ivory-100"
+              className="px-4 py-2 rounded-lg border border-warm-gray-200 bg-ivory-100 text-warm-gray-900 focus:outline-none focus:ring-2 focus:ring-sage-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
             >
               <option value="all">All Genres</option>
               {genres.map((genre) => (
@@ -95,8 +95,8 @@ export default function StoriesFilter({ stories, genres }: StoriesFilterProps) {
             onClick={() => setFilter('all')}
             className={`px-4 py-2 rounded-lg transition-colors ${
               filter === 'all'
-                ? 'bg-sage-600 text-ivory-100'
-                : 'bg-ivory-100 text-warm-gray-700 hover:bg-warm-gray-200 dark:bg-warm-gray-800 dark:text-warm-gray-300 dark:hover:bg-warm-gray-700'
+                ? 'bg-sage-600 text-white'
+                : 'bg-ivory-100 text-warm-gray-700 hover:bg-warm-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
           >
             All
@@ -105,8 +105,8 @@ export default function StoriesFilter({ stories, genres }: StoriesFilterProps) {
             onClick={() => setFilter('featured')}
             className={`px-4 py-2 rounded-lg transition-colors ${
               filter === 'featured'
-                ? 'bg-sage-600 text-ivory-100'
-                : 'bg-ivory-100 text-warm-gray-700 hover:bg-warm-gray-200 dark:bg-warm-gray-800 dark:text-warm-gray-300 dark:hover:bg-warm-gray-700'
+                ? 'bg-sage-600 text-white'
+                : 'bg-ivory-100 text-warm-gray-700 hover:bg-warm-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
           >
             Featured
@@ -115,8 +115,8 @@ export default function StoriesFilter({ stories, genres }: StoriesFilterProps) {
             onClick={() => setFilter('ambience')}
             className={`px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 ${
               filter === 'ambience'
-                ? 'bg-sage-600 text-ivory-100'
-                : 'bg-ivory-100 text-warm-gray-700 hover:bg-warm-gray-200 dark:bg-warm-gray-800 dark:text-warm-gray-300 dark:hover:bg-warm-gray-700'
+                ? 'bg-sage-600 text-white'
+                : 'bg-ivory-100 text-warm-gray-700 hover:bg-warm-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
           >
             <Headphones className="w-4 h-4" />
@@ -126,7 +126,7 @@ export default function StoriesFilter({ stories, genres }: StoriesFilterProps) {
       </div>
 
       {/* Results Count */}
-      <div className="mb-6 text-sm text-warm-gray-600 dark:text-warm-gray-400">
+      <div className="mb-6 text-sm text-warm-gray-600 dark:text-gray-400">
         {filteredStories.length} {filteredStories.length === 1 ? 'story' : 'stories'} found
       </div>
 
@@ -139,7 +139,7 @@ export default function StoriesFilter({ stories, genres }: StoriesFilterProps) {
         </div>
       ) : (
         <div className="text-center py-16">
-          <p className="text-lg text-warm-gray-600 dark:text-warm-gray-400">
+          <p className="text-lg text-warm-gray-600 dark:text-gray-400">
             No stories found matching your criteria.
           </p>
           <button

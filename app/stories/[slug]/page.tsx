@@ -60,12 +60,12 @@ export default async function StoryPage({ params }: StoryPageProps) {
         <ReadingToolbarClient storySlug={story.slug} />
         
         {/* Story Header */}
-        <section className="bg-ivory-100 dark:bg-warm-gray-800 border-b border-warm-gray-200 dark:border-warm-gray-700">
+        <section className="bg-ivory-100 dark:bg-gray-800 border-b border-warm-gray-200 dark:border-gray-700">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="max-w-4xl mx-auto">
               <div className="mb-8">
                 {story.cover && (
-                  <div className="aspect-[3/2] overflow-hidden rounded-lg bg-warm-gray-200 dark:bg-warm-gray-700 mb-8">
+                  <div className="aspect-[3/2] overflow-hidden rounded-lg bg-warm-gray-200 dark:bg-gray-700 mb-8">
                     <img
                       src={story.cover}
                       alt={story.title}
@@ -75,7 +75,7 @@ export default async function StoryPage({ params }: StoryPageProps) {
                 )}
                 
                 <div className="space-y-4">
-                  <div className="flex flex-wrap items-center gap-3 text-sm text-warm-gray-600 dark:text-warm-gray-400">
+                  <div className="flex flex-wrap items-center gap-3 text-sm text-warm-gray-600 dark:text-gray-400">
                     <span className="rounded-full bg-sage-100 px-3 py-1 text-sage-700 dark:bg-sage-900 dark:text-sage-300">
                       {story.genre}
                     </span>
@@ -89,19 +89,6 @@ export default async function StoryPage({ params }: StoryPageProps) {
                       </span>
                     )}
                   </div>
-                  
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold text-warm-gray-900 dark:text-ivory-100">
-                    {story.title}
-                  </h1>
-                  
-                  <p className="text-xl text-warm-gray-600 dark:text-warm-gray-300">
-                    {story.description}
-                  </p>
-                  
-                  <div className="flex items-center text-sm text-warm-gray-500 dark:text-warm-gray-400">
-                    <User className="mr-2 h-4 w-4" />
-                    <span>by {story.author}</span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -109,7 +96,7 @@ export default async function StoryPage({ params }: StoryPageProps) {
         </section>
 
         {/* Story Content */}
-        <section className="bg-ivory-50 dark:bg-warm-gray-900">
+        <section className="bg-ivory-50 dark:bg-gray-950">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <article className="max-w-2xl mx-auto lg:max-w-[740px]">
               <StoryContent content={story.content} />

@@ -38,7 +38,7 @@ export default function StoryProgress({ storySlug }: StoryProgressProps) {
   }, [storySlug])
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-warm-gray-200 dark:bg-warm-gray-700">
+    <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-warm-gray-200 dark:bg-gray-700">
       <div 
         className="h-full bg-sage-600 transition-all duration-150 ease-out"
         style={{ width: `${progress}%` }}

@@ -7,27 +7,27 @@ export default function AboutPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 bg-ivory-50 dark:bg-warm-gray-900">
+      <main className="flex-1 bg-ivory-50 dark:bg-gray-950">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-warm-gray-900 dark:text-ivory-100 mb-8">
+            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-warm-gray-900 dark:text-gray-100 mb-8">
               About the Author
             </h1>
             
             <div className="prose prose-lg prose-sage dark:prose-invert max-w-none">
-              <div className="bg-ivory-100 dark:bg-warm-gray-800 rounded-lg p-8 mb-8 border border-warm-gray-200 dark:border-warm-gray-700">
-                <div className="w-32 h-32 rounded-full bg-sage-200 dark:bg-sage-800 mx-auto mb-6 flex items-center justify-center">
+              <div className="bg-ivory-100 dark:bg-gray-800 rounded-lg p-8 mb-8 border border-warm-gray-200 dark:border-gray-700">
+                <div className="w-32 h-32 rounded-full bg-sage-200 dark:bg-sage-800/50 mx-auto mb-6 flex items-center justify-center">
                   <span className="text-5xl">✍️</span>
                 </div>
-                <h2 className="text-2xl font-serif font-semibold text-warm-gray-900 dark:text-ivory-100 text-center mb-4">
+                <h2 className="text-2xl font-serif font-semibold text-warm-gray-900 dark:text-gray-100 text-center mb-4">
                   Your Name
                 </h2>
-                <p className="text-warm-gray-600 dark:text-warm-gray-300 text-center">
+                <p className="text-warm-gray-600 dark:text-gray-300 text-center">
                   Writer & Storyteller
                 </p>
               </div>
 
-              <div className="space-y-6 text-warm-gray-700 dark:text-warm-gray-300">
+              <div className="space-y-6 text-warm-gray-700 dark:text-gray-300">
                 <p>
                   Welcome to my quiet corner of the internet. I believe in the power of stories to transport us, to help us understand ourselves and others, and to find meaning in the everyday.
                 </p>
@@ -40,7 +40,7 @@ export default function AboutPage() {
                   This space is designed to be a peaceful reading room—a place where you can settle in with a story, perhaps choose some ambient sounds, and let yourself get lost in the words for a while.
                 </p>
                 
-                <h3 className="text-2xl font-serif font-semibold text-warm-gray-900 dark:text-ivory-100 mt-8 mb-4">
+                <h3 className="text-2xl font-serif font-semibold text-warm-gray-900 dark:text-gray-100 mt-8 mb-4">
                   Writing Interests
                 </h3>
                 
@@ -52,7 +52,7 @@ export default function AboutPage() {
                   <li>Explorations of memory and time</li>
                 </ul>
 
-                <h3 className="text-2xl font-serif font-semibold text-warm-gray-900 dark:text-ivory-100 mt-8 mb-4">
+                <h3 className="text-2xl font-serif font-semibold text-warm-gray-900 dark:text-gray-100 mt-8 mb-4">
                   Connect
                 </h3>
                 

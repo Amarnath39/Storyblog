@@ -96,7 +96,7 @@ export default function AudioPlayer({ track, autoPlay = false }: AudioPlayerProp
   }
 
   return (
-    <div className={`fixed bottom-4 right-4 z-50 bg-ivory-100 dark:bg-warm-gray-800 rounded-lg shadow-lg border border-warm-gray-200 dark:border-warm-gray-700 transition-all ${isExpanded ? 'w-80' : 'w-auto'}`}>
+    <div className={`fixed bottom-4 right-4 z-50 bg-ivory-100 dark:bg-gray-800 rounded-lg shadow-lg border border-warm-gray-200 dark:border-gray-700 transition-all ${isExpanded ? 'w-80' : 'w-auto'}`}>
       <audio
         ref={audioRef}
         src={track.src}
@@ -110,25 +110,25 @@ export default function AudioPlayer({ track, autoPlay = false }: AudioPlayerProp
             <span className="text-lg">🎧</span>
             {isExpanded && (
               <div>
-                <p className="text-xs text-warm-gray-500 dark:text-warm-gray-400">Reading Ambience</p>
-                <p className="text-sm font-medium text-warm-gray-900 dark:text-ivory-100">{track.name}</p>
+                <p className="text-xs text-warm-gray-500 dark:text-gray-400">Reading Ambience</p>
+                <p className="text-sm font-medium text-warm-gray-900 dark:text-gray-100">{track.name}</p>
               </div>
             )}
           </div>
           <div className="flex items-center space-x-1">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="p-1 rounded hover:bg-warm-gray-200 dark:hover:bg-warm-gray-700 transition-colors"
+              className="p-1 rounded hover:bg-warm-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label={isExpanded ? 'Minimize' : 'Expand'}
             >
-              {isExpanded ? <Minimize2 className="w-4 h-4 text-warm-gray-600 dark:text-warm-gray-300" /> : <Maximize2 className="w-4 h-4 text-warm-gray-600 dark:text-warm-gray-300" />}
+              {isExpanded ? <Minimize2 className="w-4 h-4 text-warm-gray-600 dark:text-gray-300" /> : <Maximize2 className="w-4 h-4 text-warm-gray-600 dark:text-gray-300" />}
             </button>
             <button
               onClick={handleClose}
-              className="p-1 rounded hover:bg-warm-gray-200 dark:hover:bg-warm-gray-700 transition-colors"
+              className="p-1 rounded hover:bg-warm-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Close"
             >
-              <X className="w-4 h-4 text-warm-gray-600 dark:text-warm-gray-300" />
+              <X className="w-4 h-4 text-warm-gray-600 dark:text-gray-300" />
             </button>
           </div>
         </div>
@@ -146,10 +146,10 @@ export default function AudioPlayer({ track, autoPlay = false }: AudioPlayerProp
             <>
               <button
                 onClick={toggleMute}
-                className="p-1 rounded hover:bg-warm-gray-200 dark:hover:bg-warm-gray-700 transition-colors"
+                className="p-1 rounded hover:bg-warm-gray-200 dark:hover:bg-gray-700 transition-colors"
                 aria-label={isMuted ? 'Unmute' : 'Mute'}
               >
-                {isMuted ? <VolumeX className="w-5 h-5 text-warm-gray-600 dark:text-warm-gray-300" /> : <Volume2 className="w-5 h-5 text-warm-gray-600 dark:text-warm-gray-300" />}
+                {isMuted ? <VolumeX className="w-5 h-5 text-warm-gray-600 dark:text-gray-300" /> : <Volume2 className="w-5 h-5 text-warm-gray-600 dark:text-gray-300" />}
               </button>
               
               <input
@@ -159,7 +159,7 @@ export default function AudioPlayer({ track, autoPlay = false }: AudioPlayerProp
                 step="0.01"
                 value={isMuted ? 0 : volume}
                 onChange={handleVolumeChange}
-                className="flex-1 h-1 bg-warm-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-warm-gray-700 accent-sage-600"
+                className="flex-1 h-1 bg-warm-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-sage-600"
                 aria-label="Volume"
               />
             </>
